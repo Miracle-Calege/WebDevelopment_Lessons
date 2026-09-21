@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Miracle Calege, Lecc 31, 8378</title>
+    <style>
+    #calc-wrapper {
+    margin-top: 20px;
+    }
+
+    .calc {
+    display: inline-block;
+    background-color: #1a1a1a;
+    border: 3px solid #8b0000;
+    border-radius: 8px;
+    padding: 12px;
+    width: 220px;
+    }
+
+    .calc-title {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-family: Verdana, sans-serif;
+    }
+
+    #display {
+    width: 100%;
+    background-color: white;
+    border: none;
+    text-align: right;
+    font-size: 20px;
+    padding: 4px 6px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    height: 36px;
+    }
+
+    .calc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    }
+
+    .calc-btn {
+    background-color: #2d2d2d;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 8px 0;
+    cursor: pointer;
+    font-family: Verdana, sans-serif;
+    }
+
+    .calc-btn:hover {
+    background-color: #444;
+    }
+
+    .calc-btn.equals {
+    background-color: #8b0000;
+    }
+
+    .calc-btn.equals:hover {
+    background-color: #b00000;
+    }
+    #resultadoTabuada {
+        margin-top: 15px;
+        padding: 10px;
+        width: 220px;
+        background-color: #f0f0f0;
+        border: 1px solid black;
+        font-family: Verdana, sans-serif;
+    }
+    </style>
+</head>
+
+<body>
+<img src="../HTML/images/isutc.jpeg" alt="Logotipo do isutc" width="100" height="100">
+
+<p>HTML (HyperText Markup Language) – Linguagem standard para web, é a linguagem para descrever a estrutura das páginas web</p>
+
+<p>CSS (Cascading Style Sheet) – Look & layout, é a linguagem para descrever a apresentação das páginas da web, incluindo cores, layout e fontes.</p>
+
+<p>JS (JavaScript Web) – Scripting para comportamento dinâmico, é um código de programa que não precisa de pré-processamento</p>
+
+<br>
+
+<!-- Lâmpada -->
+<h3>Controlar a Lâmpada</h3>
+
+<img id="lampada" src="lampada_off.png" width="100">
+
+<br><br>
+
+<button onclick="ligar()">Ligar a lampada</button>
+<button onclick="desligar()">Apagar a lampada</button>
+
+<br><br>
+
+<!-- Tabela -->
+<table border="1" width="250" height="100"
+       style="background-color:lightblue; font-family:verdana; font-size:20px;">
+
+    <tr>
+        <th></th>
+        <th>Maputo</th>
+        <th>Vilanculos</th>
+        <th>Inhambane</th>
+        <th>Beira</th>
+    </tr>
+
+    <tr>
+        <th>Maputo</th>
+        <td></td>
+        <td>276</td>
+        <td>228</td>
+        <td>448</td>
+    </tr>
+
+    <tr>
+        <th>Vilanculos</th>
+        <td>276</td>
+        <td></td>
+        <td>127</td>
+        <td>132</td>
+    </tr>
+
+    <tr>
+        <th>Inhambane</th>
+        <td>228</td>
+        <td>127</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <th>Beira</th>
+        <td>448</td>
+        <td>132</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+</table>
+
+<div id="calc-wrapper">
+    <div class="calc">
+        <div class="calc-title">Calculadora</div>
+        <input type="text" id="display" readonly placeholder="0">
+        <div class="calc-grid">
+            <button class="calc-btn" onclick="limpar()">C</button>
+            <button class="calc-btn" onclick="apagar()">&lt;</button>
+            <button class="calc-btn" onclick="inserir('/')">/</button>
+            <button class="calc-btn" onclick="inserir('*')">X</button>
+
+            <button class="calc-btn" onclick="inserir('7')">7</button>
+            <button class="calc-btn" onclick="inserir('8')">8</button>
+            <button class="calc-btn" onclick="inserir('9')">9</button>
+            <button class="calc-btn" onclick="inserir('-')">-</button>
+
+            <button class="calc-btn" onclick="inserir('4')">4</button>
+            <button class="calc-btn" onclick="inserir('5')">5</button>
+            <button class="calc-btn" onclick="inserir('6')">6</button>
+            <button class="calc-btn" onclick="inserir('+')">+</button>
+
+            <button class="calc-btn" onclick="inserir('1')">1</button>
+            <button class="calc-btn" onclick="inserir('2')">2</button>
+            <button class="calc-btn" onclick="inserir('3')">3</button>
+            <button class="calc-btn equals" onclick="calcular()">=</button>
+
+            <button class="calc-btn" onclick="inserir('0')" style="grid-column: span 2;">0</button>
+            <button class="calc-btn" onclick="inserir('.')">.</button>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+<h1>Tabuada</h1>
+
+<label>Digite um número de 1 a 10:</label>
+<input type="number" id="numeroTabuada" min="1" max="10">
+
+<button onclick="gerarTabuada()">Gerar Tabuada</button>
+
+<div id="resultadoTabuada"></div>
+
+
+
+<script>
+    function ligar() {
+        document.getElementById("lampada").src = "lampada_acesa.avif";
+    }
+
+    function desligar() {
+        document.getElementById("lampada").src = "lampada_apagada.avif";
+
+    }
+
+    function inserir(valor) {
+        var disp = document.getElementById('display');
+        disp.value += valor;
+    }
+
+    function limpar() {
+        document.getElementById('display').value = '';
+    }
+
+    function apagar() {
+        var disp = document.getElementById('display');
+        disp.value = disp.value.slice(0, -1);
+    }
+
+    function calcular() {
+        var disp = document.getElementById('display');
+        try {
+            disp.value = eval(disp.value);
+        } catch (e) {
+            disp.value = 'Erro';
+        }
+    }
+
+    function gerarTabuada() {
+
+        var numero = document.getElementById("numeroTabuada").value;
+
+        var resultado = document.getElementById("resultadoTabuada");
+
+        resultado.innerHTML = "";
+
+        if (numero < 1 || numero > 10 || numero === "") {
+            resultado.innerHTML = "Digite um número válido de 1 a 10";
+            return;
+        }
+
+        for (var i = 1; i <= 10; i++) {
+
+            resultado.innerHTML +=
+                numero + " x " + i + " = " + (numero * i) + "<br>";
+        }
+    }
+
+</script>
+
+</body>
+</html>
+
+

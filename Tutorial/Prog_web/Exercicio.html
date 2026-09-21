@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <link rel="icon" href="../HTML/images/isutc(1).png" type="image/png">
+
+
+  <style>
+
+    table{
+      width:250px;
+      height:100px;
+      background-color:black;
+      text-align: justify;
+      font-family:Verdana, sans-serif;
+      font-size:20px;
+      border:1px;
+    }
+
+    tr{
+      background-color:lightblue;
+      text-align: center;
+
+    }
+
+
+
+    </style>
+
+</head>
+<body>
+
+<img src="../HTML/images/isutc.jpeg" alt="logotipo do ISUTC" height="100" width="100"/>
+
+<p>HTML((HyperText Markup Language) – Linguagem standard para web_ é a linguagem para descrever a estrutura das páginas web</p>
+<p>CSS( Cascading Style Sheet) – Look & layout_ é a linguagem para descrever a apresentação das páginas da web, incluindo cores, layout e fontes.</p>
+<p>JS (JAVASCRIPT WEB )– Scripting para comportamento dinâmico_ é um código de programa que não precisa de pré-processamento</p>
+
+
+
+<table>
+
+  <tr>
+    <th>  </th>
+    <th>Maputo</th>
+    <th>Vilanculos</th>
+    <th>Inhambane</th>
+    <th>Beira</th>
+  </tr>
+
+  <tr>
+  <td>Maputo</td>
+    <td></td>
+    <td>276</td>
+    <td>228</td>
+    <td>448</td>
+  </tr>
+
+  <tr>
+    <td>Vilanculos</td>
+    <td>276</td>
+    <td></td>
+    <td>127</td>
+    <td>132</td>
+  </tr>
+
+  <tr>
+    <td>Inhambane</td>
+    <td>228</td>
+    <td>127</td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Beira</td>
+    <td>448</td>
+    <td>132</td>
+    <td></td>
+    <td></td>
+  </tr>
+  </table>
+
+
+<button id="botao">Click me to display Actual Date and Time</button>
+<p id="display"></p>
+
+<h3>Lista nao ordenada</h3>
+<ul>
+  <li>Pao</li>
+  <li>Manteiga</li>
+  <li>Queijo</li>
+  <li>Leite</li>
+  <li>Ovos</li>
+</ul>
+
+<h3>Lista ordenada</h3>
+<ol>
+  <li>Pao</li>
+  <li>Manteiga</li>
+  <li>Queijo</li>
+  <li>Leite</li>
+  <li>Ovos</li>
+  </ol>
+
+<h3>Lista descritiva</h3>
+<dl>
+  <dt>Bolo<dt>
+  <dd>Derivado de ovos e farinha</dd>
+
+</dl>
+
+
+<script>
+  const botao=document.getElementById("botao");
+  const display=document.getElementById("display");
+  botao.onclick=function (){
+    display.textContent="Quarta-feira 29 Abril 2026";
+
+
+
+  }
+
+  </script>
+
+
+
+
+</body>
+</html>
