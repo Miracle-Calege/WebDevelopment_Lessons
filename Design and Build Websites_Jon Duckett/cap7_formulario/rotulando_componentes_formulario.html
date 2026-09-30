@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<!-- Primeira abordagem-->
+<label>Age: <input type="text" name="age" /></label>
+<br/>
+Gender:
+<input id="female" type="radio" name="gender"
+       value="f">
+
+<!-- Segunda abordagem-->
+<label for="female">Female</label>
+<input id="male" type="radio" name="gender"
+       value="m">
+<label for="male">Male</label>
+
+</body>
+</html>
+
+
+<!--
+
+<label></label> -> é usado para rotular componentes.É ideal que cada controlador/componete do formulario tenha um(radio button, checkbox,lists, etc).
+
+Pode ser usado de 2 maneiras:
+
+1.Colocar o texto e o elemento input entre as tag.
+
+2.Separar do controlador/componete do formulario e indicando uma relacao usando o atributo for .
+
+for-> indica que controlador de formulario a label pertence usando id do elemento(o valor do for deve ser igual ao valor do id do elemento referenciado).
+
+
+NB:Quando a <label> é usado com radio button ou checkbox o item pode ser selecionado clicando também a label.
+
+ -->
