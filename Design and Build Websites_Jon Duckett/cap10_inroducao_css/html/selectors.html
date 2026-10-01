@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors</title>
+</head>
+<body>
+<h1><a id="top">Kitchen Garden Calendar</a></h1>
+<p id="introduction">Here you can read our handy guide about what to do when.</p>
+<h2>Spring</h2>
+<ul>
+    <li><a href="mulch.html">Spring mulch vegetable beds</a></li>
+    <li><a href="potato.html">Plant out early potatoes</a></li>
+    <li><a href="tomato.html">Sow tomato seeds</a></li>
+    <li><a href="beet.html">Sow beet seeds</a></li>
+    <li><a href="zucchini.html">Sow zucchini seeds</a></li>
+    <li><a href="rhubarb.html">Deadhead rhubarb flowers</a></li>
+</ul>
+<p class="note">This page was written by <a href="mailto:ivy@example.org">ivy@example.org</a> for <a href="http://www.example.org">Example</a>.</p>
+<p><a href="#top">Top of page</a></p>
+</body>
+</html>
+
+<!--
+ Selector         significado                                                           exemplo
+ universal        aplicado a todos                                                        *{]
+                  elementos no documento(*)
+
+ type              corresponde a todos                                                    h1,h2,h3{}
+                    elementos com os
+                     nomes especificados
+
+
+class              corresponde a todos elementos                                          .note{}
+                    cujo a class tem o valor
+                     especificado(o "." antecede o nome da classe)                   p.note{] -> aplica apenas aos elementos <p> da class
+
+
+id                   correspondete ao elemento com                                      #introduction{}
+                       o id especificado("#"antecede o id)
+
+
+child               todo o elemento que é filho directo
+                    do outro (filho é o elemento dentro do outro)             li > a{}    NB: só vai afectar os <a> que sao filhos do <li>
+                     pai> filho{}
+
+descendant            corresponde a todos elementos que sao descendentes            p a{}
+                        de um outro(nao apenas filho directo)
+                        ascendente  descente
+
+adjacent                corresponde a elementos que vem um depois do outro                 h1+p{}
+sibling
+
+
+general                 corresponde a elementos que sao irmaos                          h1~p{}
+siblings                mesmo nao estando logo depois  do outro
+
+ -->

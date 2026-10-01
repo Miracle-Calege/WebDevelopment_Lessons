@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+<!--
+
+ Selector                                   significado                                           exemplo
+ existence                                  corresponde ao                                         p[class]->corresponde a todos elementos <p> com um atributo class
+                                             atributo especifico com qualquer valor([])
+
+equality                                corresponde a um atributo especifico                        p[class="dog"]->corresponde a todos elementos <p> que a class é dog
+                                         com atributo especifico([=])
+
+space                                       corrsponde a um atributo cujo o valor                   p[class~="dog"]-> todos elementtos <p>   com um atributo class com uma lista de itens cujo uns does elementos é dog
+                                              numa lista(separada por espacos)(~=)
+
+prefix                                      [^=]-> corresponde a um atributo que                    p[attr^="d"] -> todo elemento <p> com um atributo que comece por d.
+                                            comece por uma string especifica
+
+
+substring                                   [*=]->corresponde a um atributo                         p[attr*="do"]->todo elemento <p> com um atributo que contenha por do.
+                                                que contenha a string
+
+ suffix                                     [$=]-> corresponde a um atributo que                    p[attr$="g"]->todo elemento <p> com um atributo que termine por g.
+                                             termine com a string
+ -->

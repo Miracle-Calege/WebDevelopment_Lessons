@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hover Active Focus</title>
+    <style type="text/css">
+        input {
+            padding: 6px 12px 6px 12px;
+            border: 1px solid #665544;
+            color: #ffffff;}
+        input.submit:hover {
+            background-color: #665544;}
+        input.submit:active {
+            background-color: chocolate;}
+        input.text {
+            color: #cccccc;}
+        input.text:focus {
+            color:#665544;}
+    </style>
+</head>
+<body>
+<form>
+    <input type="text" class="text" value="Enter email address..." />
+    <input type="submit" class="submit" />
+</form>
+</body>
+</html>
+
+<!--
+:hover-> usado para mudar a aparencia do elementos sempre que um dispositivo de apontar(ex: mouse) fique sobre o elemento.No codigo se colocarmos o cursor sobre o botao a cor do fundo do botao mudará
+
+:active->é aplicado a aparencia quando o componente esta a ser activado ou está a interagir com o usuário.No codigo quando o botao for pressionado vai mudar para a cor cholate
+
+:focus->aplicado quando um elemento tem "focus"(quando o elemento está pronto para interagir com o usuário).No codigo quando o cursor estiver no textfield
+as bordas vao ganhar cor.
+
+-->
