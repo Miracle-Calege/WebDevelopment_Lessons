@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gaps Between Cells</title>
+    <style type="text/css">
+        td {
+            background-color: #0088dd;
+            padding: 15px;
+            border: 2px solid #000000;}
+        table.one {
+            border-spacing: 5px 15px;}
+        table.two {
+            border-collapse: collapse;}
+    </style>
+</head>
+<body>
+<table class="one">
+    <tr>
+        <td>1</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+</table>
+<table class="two">
+    <tr>
+        <td>1</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+</table>
+</body>
+</html>
+
+<!--
+ border-spacing->permite controlar a distância adjacente entre as células.NB:por defeito os navegadoores deixam um pequeno gap entre as células.O valor é geralmente especificado em pixels
+
+Podemos especificar 2 valores; gap horizontal e gap vertical.
+
+Quando a largura de duas células se junta forma uma única borda que o valor será o seu somatório. Para separar usamos:
+
+border-collapse-> que divide as bordas de cada célula.
+
+Os valores serao:
+
+collapse->divide as bordas(vai ignorar border-spacing e empty-cells)
+
+separate-> destacas as bordas uma da outra.
+
+
+ -->

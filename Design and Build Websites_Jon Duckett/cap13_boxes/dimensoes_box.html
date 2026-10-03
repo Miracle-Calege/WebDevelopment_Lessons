@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Width Height</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, Verdana, sans-serif;
+            color: #111111;}
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: #ee3e80;}
+        p {
+            height: 75%; /* Neste caso o paragrafo tem 225 pixels já que está dentro do div que tem 300(0.75*300) */
+            width: 75%;
+            background-color: #e1ddda;}
+    </style>
+</head>
+<body>
+<div>
+    <p>The Moog company pioneered the commercial manufacture of modular voltage-controlled analog synthesizer systems in the early 1950s.</p>
+</div>
+</body>
+</html>
+
+<!--
+ Css trata os elementos como-se eles estivessem numa caixa. Por defeito a caixa "box" tem o suficiente para que o seu conteúdo caba nela. Mas podemos  colocar as nossas proprias dimensoes usando as propriedades:
+ width e height.
+
+ Podemos especificar as dimensoes em pixels(é o mais popular), percentagem(é relativa ao tamanho da janela do navegador/se estiver dentro de outra box) ou ems(o tamanho da box é baseado no tamanho do texto dentro dela).
+
+ -->

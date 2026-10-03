@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Box Shadow</title>
+    <style type="text/css">
+        p {
+            width: 100px;
+            height: 100px;
+            background-color: #e1ddda;
+            margin: 20px;
+            display: inline-block;}
+        p.one {
+            box-shadow: -5px -5px #777777;
+        }
+        p.two {
+            box-shadow: 5px 5px 5px #777777;}
+
+        p.three {
+            box-shadow: 5px 5px 5px 5px #777777;}
+
+        p.four {
+            box-shadow: 0 0 10px #777777;}
+
+        p.five {
+            box-shadow: inset 0 0 10px #777777;}
+
+    </style>
+</head>
+<body>
+<p class="one"></p>
+<p class="two"></p>
+<p class="three"></p>
+<br />
+<p class="four"></p>
+<p class="five"></p>
+</body>
+</html>
+
+<!--
+ box-shadow->permite adicionar sombra em volta da box.Funciona exactamente como text-shadow.
+
+ horizontal offset->valores negativos posicionam a sombra a esquerda da box.
+
+ vertical offset->valores negativos posicionam a sombra no topo da box.
+
+ blur distance->se omitido a sombra é uma linha sólida como uma borda
+
+ spread of shadow-> se usado o valor fará a sombra expandir para todas direcçoes e valores negativos farao o contrário(encolher).
+
+ o valor inset-> é usada antes desses valores para criar uma sombra interna.
+ -->
